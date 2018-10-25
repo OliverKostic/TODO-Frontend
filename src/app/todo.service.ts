@@ -7,7 +7,6 @@ import {HttpClient} from '@angular/common/http';
 export class TodoService {
 
   uri = 'https://todoexercise-backend.herokuapp.com';
-  public currentElement: Object;
 
   constructor(private http: HttpClient) {
   }

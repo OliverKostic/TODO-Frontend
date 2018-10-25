@@ -4,6 +4,6 @@ The frontend part of the TODOList app. It's written in Angular 6 and Angular Mat
 
 # Demo
 
-Try this app here: https://issues-oliver.herokuapp.com/
+Try this app here: https://todoexercise-frontend.herokuapp.com/
 
 
