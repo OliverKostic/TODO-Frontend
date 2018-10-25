@@ -1,0 +1,19 @@
+<mat-card class="content">
+  <section class="mat-typography">
+    <h3>Update To-Do</h3>
+  </section>
+  <mat-divider></mat-divider>
+  <br>
+  <form [formGroup]="updateForm" class="edit-form">
+    <mat-form-field class="field-full-width">
+      <input matInput placeholder="To-Do Title" formControlName="title" #title>
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <br><br>
+    <button mat-raised-button color="accent" routerLink="/list">Back</button>&nbsp;
+    <button type="submit" (click)="updateTodo(title.value)" [disabled]="updateForm.pristine || updateForm.invalid"
+            mat-raised-button color="primary">Save
+    </button>
+  </form>
+</mat-card>
+

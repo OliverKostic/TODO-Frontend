@@ -1,0 +1,34 @@
+<mat-card class="content">
+  <button mat-raised-button color="primary" routerLink="/create">Create To-Do</button>
+  <br><br>
+  <mat-divider></mat-divider>
+  <br>
+  <table mat-table [dataSource]="todos">
+    <ng-container matColumnDef="checkbox">
+      <th mat-header-cell *matHeaderCellDef>
+      </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-checkbox [checked]="element.completed" (change)="updateCompleted(element, $event)"></mat-checkbox>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef>Title
+      </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef class="mat-column-right">Actions</th>
+      <td mat-cell *matCellDef="let element" class="mat-column-right">
+        <button mat-button color="primary" (click)="editTodo(element)">Edit</button>
+        <button mat-button color="warn" (click)="deleteTodo(element)">Delete</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>
+
+

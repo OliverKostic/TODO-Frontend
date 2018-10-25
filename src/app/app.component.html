@@ -1,0 +1,10 @@
+<mat-toolbar>
+  <span>To-Do List</span>
+  <div *ngIf="auth.isAuthenticated()">
+    <span class="username">User: {{auth.username}}</span>
+    <button mat-raised-button color="warn" (click)="logOut()">Log Out</button>
+  </div>
+</mat-toolbar>
+<div>
+  <router-outlet></router-outlet>
+</div>

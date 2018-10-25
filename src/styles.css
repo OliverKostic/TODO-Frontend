@@ -1,0 +1,12 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+.content {
+  width: 50%;
+  position: absolute;
+  margin: auto;
+  top: 64px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
